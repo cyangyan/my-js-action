@@ -22,7 +22,7 @@ jobs:
         run: "echo Output: ${{ steps.greet.outputs.greeting }}"
 
   compliment: 
-  needs: greet 
-  runs-on: ubuntu-latest 
-  steps: 
-    - run: "echo The first job said: ${{ needs.greet.outputs.greeting }}"
+    needs: greet 
+    runs-on: ubuntu-latest 
+    steps: 
+      - run: "echo The first job said: ${{ needs.greet.outputs.greeting }}"
